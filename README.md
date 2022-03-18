@@ -10,7 +10,8 @@ Linkedin profile: <https://www.linkedin.com/in/rodrigowanderleyboaventura> <br /
 This project uses Java Script object oriented programming to build a card games, called war. The game is played in doubles and each player must show a card from its deck. If the card is bigger than another, the player who has the bigger card number, gets the other plyers card. If the cards are equal, players need to WAR! Each player puts four cards on the table and reveals the last one. The player who has the bigger card, gets all the oponents card. The game finishes when one player has all 52 cards of the deck. <br />
 In this game, the computer plays against itself, using random plays.
 # Deployment
-Shows only the log of the game.
+Shows only the log of the game (serves the purpose of the project)
+<https://rodrigowb.github.io/war-game/>
 # Files description
 ## wargame.js
 Provides the main file where the random game happens. It is generated a deck of cards and splitted randomly among the both players. Those players play the game and each round shows who wins and how many cards each player has left.
