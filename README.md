@@ -17,4 +17,9 @@ Provides the main file where the random game happens. It is generated a deck of 
 ## index.html
 Provides the log of the game, showing the informations about each round. To play a random game again, you must reload the page
 # Technologies used
-
+1. Command line
+2. Git
+3. HTML (basic)
+5. JS
+6. Object Oriented Programming 
+7. Github pages

@@ -62,23 +62,39 @@ class GameOfWar {
     return this.playersDeck;
   };
 
+  generateTag(content) {
+    /**
+     * Generates p tags in each round to show the log on the HTML document
+     */
+    let tag = document.createElement('p');
+    let text = document.createTextNode(content);
+    tag.appendChild(text);
+    let element = document.querySelector('body');
+    element.appendChild(tag);
+  }
+
   printResult(winner, roundNumber, cardOne, cardTwo, deckOne, deckTwo) {
     /**
      * Generates customized logs for each possibility in the game.
      */
     if (winner === 'tie') {
       let output = `Round ${roundNumber}--TIE--P1: ${cardOne} P2: ${cardTwo}--DECKONE: ${deckOne.length} DECKTWO: ${deckTwo.length}`;
+      this.generateTag(output);
       return console.log(output);
     } else if (winner === 'one') {
       let output = `Round ${roundNumber}--P1 WINS--P1: ${cardOne} P2: ${cardTwo}--DECKONE: ${deckOne.length} DECKTWO: ${deckTwo.length}`;
+      this.generateTag(output);
       return console.log(output);
     } else if (winner === 'two') {
       let output = `Round ${roundNumber}--P2 WINS--P1: ${cardOne} P2: ${cardTwo}--DECKONE: ${deckOne.length} DECKTWO: ${deckTwo.length}`;
+      this.generateTag(output);
       return console.log(output);
     } else if (winner === 'tieWar') {
       let output = `Round ${roundNumber}--TIE ON WAR--P1: ${cardOne} P2: ${cardTwo}--DECKONE: ${deckOne.length} DECKTWO: ${deckTwo.length}`;
+      this.generateTag(output);
       return console.log(output);
     } else {
+      this.generateTag('-----ERROR-----');
       return console.log('-----ERROR-----')
     }
   };
@@ -176,8 +192,6 @@ class GameOfWar {
 // Instatiate a class
 let testWar = new GameOfWar();
 testWar.executionMain();
-
-
 
 
 
